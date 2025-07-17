@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #b36bff;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #b36bff;
+}
+
+.strength-bar {
+  height: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background: #eee;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.strength-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+.message {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.suggestion {
+  font-size: 14px;
+  color: #333;
+}
+
+.weak { background: red; }
+.medium { background: orange; }
+.strong { background: limegreen; }
